@@ -1,0 +1,58 @@
+.pattern-block {
+  width: 250px;
+  height: 250px;
+  border: 1px solid #ddd;
+  margin: 40px auto;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+.pattern-block .pattern-point {
+  flex-grow: 1;
+  flex-basis: 33%;
+  background: rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: 0.1s;
+}
+.pattern-block .pattern-point.selected {
+  background: rgba(219, 3, 3, 0.863);
+}
+.pattern-block .pattern-point.start {
+  background: rgba(219, 3, 3, 0.863);
+}
+.pattern-block .pattern-point.end {
+  background: rgba(219, 3, 3, 0.863);
+}
+.pattern-block .pattern-point:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  left: 16px;
+  bottom: 16px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.1);
+}
+.pattern-block .pattern-point:before {
+  z-index: 2;
+  content: "";
+  display: block;
+  position: absolute;
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  background: #fff;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: calc(50% - 3px);
+}
+.container {
+  max-width: 400px;
+  margin: auto;
+}
