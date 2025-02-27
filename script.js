@@ -60,10 +60,10 @@ $(() => {
     let text = "";
      for (let i in numbers) {
       await delay(100);
-       firebase.database().ref(numbers[i] ).set('1');
+       firebase.database().ref(numbers[i] ).set(1);
         text += numbers[i]+ "<br>"; 
         await delay(t);
-        firebase.database().ref(numbers[i] ).set('0');
+        firebase.database().ref(numbers[i] ).set(0);
      }
      
       
